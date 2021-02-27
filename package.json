@@ -5,11 +5,77 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest",
+    "clearInstall": "rm -rf node_modules && yarn.lock && yarn cache clean && yarn"
   },
   "dependencies": {
     "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "babel-jest": "^26.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-no-cyrillic-string": "^1.0.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.4.2",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "jest-resolve": "^26.4.0",
+    "jest-watch-typeahead": "^0.6.0",
+    "prettier": "^2.0.4",
+    "prettier-eslint": "^9.0.1",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.2.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^src(.*)$": "<rootDir>/src$1",
+      "^config(.*)$": "<rootDir>/config$1"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.(ts|tsx)",
+      "**/components/**/*.test.(ts|tsx)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "./.next/",
+      "./node_modules/",
+      "__mocks__"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.jest.json"
+      }
+    }
   }
 }
