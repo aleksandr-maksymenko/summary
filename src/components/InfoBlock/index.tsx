@@ -42,7 +42,7 @@ const contacts = [
   },
   {
     type: 'location',
-    link: '',
+    link: 'https://www.google.com.ua/maps/@50.4273936,30.5173127,14z',
     icon: <Location />,
     text: 'Kiev, Ukraine',
   },
