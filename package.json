@@ -54,8 +54,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^src(.*)$": "<rootDir>/src$1",
-      "^config(.*)$": "<rootDir>/config$1"
+      "^@components(.*)$": "<rootDir>/src/components/$1",
+      "^@icons(.*)$": "<rootDir>/src/assets/icons/$1"
     },
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
