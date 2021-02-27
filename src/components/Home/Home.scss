@@ -1,0 +1,17 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.home {
+  &__main {
+    max-width: $container;
+    margin: 0 auto;
+    display: grid;
+
+    @include mobile {
+      grid-template-columns: 1.3fr 0.7fr;
+      grid-template-rows: 1fr;
+      gap: 1.25rem;
+      grid-template-areas: '. .';
+    }
+  }
+}
