@@ -1,0 +1,58 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.about {
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include mobile {
+    flex-direction: row;
+  }
+
+  @include smallDesktop {
+    max-width: $container;
+    margin: 0 auto;
+  }
+
+  &__image {
+    max-width: 9.375rem;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+
+    @include mobile {
+      margin: {
+        right: 1.25rem;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__article {
+    color: #373535;
+  }
+
+  &__name {
+    font-size: 1.55rem;
+    line-height: 1.75rem;
+  }
+
+  &__position {
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #8a8a8a;
+    display: block;
+  }
+
+  &__bio {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #262222;
+
+    @include tablet {
+      max-width: 60%;
+    }
+  }
+}

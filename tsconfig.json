@@ -20,7 +20,8 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./src/components/"]
+      "@components/*": ["src/components/*"],
+      "@icons/*": ["src/assets/icons/*"]
     }
   },
   "exclude": [

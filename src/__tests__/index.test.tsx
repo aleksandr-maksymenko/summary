@@ -5,6 +5,6 @@ import Index from '../pages'
 describe('Index pages', () => {
   it('Should return Index pages', () => {
     const wrapper = shallow(<Index />)
-    expect(wrapper.find('div')).toHaveLength(1)
+    expect(wrapper).toMatchSnapshot()
   })
 })
