@@ -5,11 +5,7 @@ export default function About() {
 
   return (
     <section className={defaultAboutClassName}>
-      <img
-        src="https://placehold.it/150"
-        alt="avatar"
-        className={`${defaultAboutClassName}__image`}
-      />
+      <div className={`${defaultAboutClassName}__image`} />
       <article className={`${defaultAboutClassName}__article`}>
         <h1 className={`${defaultAboutClassName}__name`}>
           Aleksandr Maksymenko

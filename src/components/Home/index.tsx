@@ -5,23 +5,75 @@ import InfoBlock from '@components/InfoBlock'
 import AsideInfo from '@components/AsideInfo'
 
 const skills = [
-  'React - 3 years',
-  'React Native - 1 year',
-  'Redux - 2 years',
-  'Mobx - 1 year',
-  'Mobx-State-Tree - 1 year',
-  'HTML/CSS - 4 years',
-  'JavaScript - 3 years',
-  'Typescript - 2 years',
-  'Node.js/Express - 0.5 year',
-  'Next.js - 1 year',
+  {
+    text: 'React -',
+    period: '3 years',
+  },
+  {
+    text: 'React Native -',
+    period: '1 year',
+  },
+  {
+    text: 'Redux -',
+    period: '2 years',
+  },
+  {
+    text: 'Mobx -',
+    period: '1 year',
+  },
+  {
+    text: 'Mobx-State-Tree -',
+    period: '1 year',
+  },
+  {
+    text: 'HTML/CSS -',
+    period: '4 years',
+  },
+  {
+    text: 'JavaScript -',
+    period: '3 years',
+  },
+  {
+    text: 'TypeScript -',
+    period: '2 years',
+  },
+  {
+    text: 'Node.js/Express -',
+    period: '0.5 year',
+  },
+  {
+    text: 'Next.js -',
+    period: '1 year',
+  },
 ]
 
 const interests = [
-  'Web development',
-  'Snow Boarding',
-  'Terminator',
-  'Rock (Music)',
+  { text: 'Web development' },
+  { text: 'Snow Boarding' },
+  { text: 'Terminator' },
+  { text: 'Terminator' },
+  { text: 'Rock (Music)' },
+]
+
+const links = [
+  {
+    text: 'https://app.farmforesight.com/login',
+    href:
+      'https://app.farmforesight.com/login (login: sky3107@mfsa.com, pass: 123)',
+  },
+]
+
+const achievements = [
+  {
+    text: 'some text',
+  },
+]
+
+const languages = [
+  {
+    text: 'Russian',
+    proficiency: 'Native or Bilingual Proficiency',
+  },
 ]
 
 export default function Home() {
@@ -29,21 +81,41 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Home page</title>
-      </Head>
-
       <About />
       <InfoBlock />
 
       <main className={`${defaultHomeClassName}__main`}>
         <section>exp</section>
         <aside>
-          <AsideInfo type="Skills" defaultClassName="skills" list={skills} />
           <AsideInfo
-            type="interests"
+            type="block"
+            title="skills"
+            defaultClassName="skills"
+            list={skills}
+          />
+          <AsideInfo
+            type="block"
+            title="interests"
             defaultClassName="interests"
             list={interests}
+          />
+          <AsideInfo
+            type="link"
+            title="personal projects"
+            defaultClassName="projects"
+            list={links}
+          />
+          <AsideInfo
+            type="link"
+            title="Achievements"
+            defaultClassName="achievements"
+            list={achievements}
+          />
+          <AsideInfo
+            type="link"
+            title="languages"
+            defaultClassName="languages"
+            list={languages}
           />
         </aside>
       </main>

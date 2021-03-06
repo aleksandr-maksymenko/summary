@@ -17,8 +17,13 @@
   }
 
   &__image {
+    width: 100%;
     max-width: 9.375rem;
+    height: 9.375rem;
     margin-bottom: 1.25rem;
+    background-image: url('/images/avatar.jpg');
+    background-size: cover;
+    background-position: center;
     border-radius: 50%;
 
     @include mobile {

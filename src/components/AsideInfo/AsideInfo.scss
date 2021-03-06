@@ -1,6 +1,6 @@
 @import 'src/styles/mixins';
 
-.skills, .interests {
+.skills, .interests, .projects, .achievements, .languages {
   padding: 0 1.25rem;
   order: 1;
 
@@ -11,7 +11,7 @@
 
   &__title {
     padding: 1rem 0;
-    font-size: 2.875rem;
+    font-size: 2.675rem;
     line-height: 3rem;
     text-transform: uppercase;
     color: #4aa0ae;
@@ -34,13 +34,30 @@
       font-size: 1.125rem;
     }
   }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+
+    .svg__icon {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin-left: 0.625rem;
+    }
+  }
 }
 
 .skills__item {
   color: #fff;
-  background-color: #4aa0ae;
+  background-color: #0891B2;
 }
 
 .interests__item {
   border: 0.125rem solid #8c8c8c;
+}
+
+.projects, .achievements, .languages {
+  &__item {
+    padding: 0;
+  }
 }
