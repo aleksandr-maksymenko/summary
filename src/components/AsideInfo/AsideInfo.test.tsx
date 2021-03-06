@@ -2,11 +2,12 @@ import React from 'react'
 import { shallow, ShallowWrapper } from 'enzyme'
 import AsideInfo from './index'
 
-const mockedList = ['one', 'two', 'three']
+const mockedList = [{ text: 'one' }]
 
 const mockedObject = {
   defaultClassName: 'aside-info',
-  type: '',
+  type: 'link',
+  title: '',
   list: mockedList,
 }
 
