@@ -1,8 +1,8 @@
 import React from 'react'
-import Head from 'next/head'
 import About from '@components/About'
 import InfoBlock from '@components/InfoBlock'
 import AsideInfo from '@components/AsideInfo'
+import Experience from '@components/Experience'
 
 const skills = [
   {
@@ -51,15 +51,13 @@ const interests = [
   { text: 'Web development' },
   { text: 'Snow Boarding' },
   { text: 'Terminator' },
-  { text: 'Terminator' },
   { text: 'Rock (Music)' },
 ]
 
 const links = [
   {
-    text: 'https://app.farmforesight.com/login',
-    href:
-      'https://app.farmforesight.com/login (login: sky3107@mfsa.com, pass: 123)',
+    text: 'farmforesight',
+    href: 'https://app.farmforesight.com/login',
   },
 ]
 
@@ -85,7 +83,7 @@ export default function Home() {
       <InfoBlock />
 
       <main className={`${defaultHomeClassName}__main`}>
-        <section>exp</section>
+        <Experience />
         <aside>
           <AsideInfo
             type="block"
