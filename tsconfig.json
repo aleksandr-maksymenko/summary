@@ -19,7 +19,9 @@
       "@components/*": ["src/components/*"],
       "@icons/*": ["src/assets/icons/*"],
       "@images/*": ["src/assets/images/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@actions/*": ["src/actions/*"],
+      "@api/*": ["src/api/*"],
     }
   },
   "exclude": ["node_modules"],

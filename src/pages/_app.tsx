@@ -1,11 +1,17 @@
+import React from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { Provider } from 'react-redux'
+import { useStore } from '../store'
+
 import Header from '@components/Header'
 
 import '@duik/it/dist/styles.css'
 import '@styles/globals.scss'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const store = useStore(pageProps.initialReduxState)
+
   return (
     <>
       <Head>
@@ -18,7 +24,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <main>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </main>
     </>
   )

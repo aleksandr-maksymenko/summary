@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "@duik/it": "^0.6.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
     "sass": "^1.32.8"
   },
   "devDependencies": {
@@ -27,6 +31,7 @@
     "@types/node": "^14.14.31",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.16",
     "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "babel-jest": "^26.3.0",
@@ -59,7 +64,9 @@
       "^@components(.*)$": "<rootDir>/src/components/$1",
       "^@icons(.*)$": "<rootDir>/src/assets/icons/$1",
       "^@images(.*)$": "<rootDir>/src/assets/images/$1",
-      "^@styles(.*)$": "<rootDir>/src/styles/$1"
+      "^@styles(.*)$": "<rootDir>/src/styles/$1",
+      "^@actions(.*)$": "<rootDir>/src/actions/$1",
+      "^@api(.*)$": "<rootDir>/src/api/$1"
     },
     "transform": {
       "^.+\\.(ts|tsx)$": "ts-jest"
