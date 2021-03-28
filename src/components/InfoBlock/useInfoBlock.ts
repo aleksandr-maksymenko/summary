@@ -1,8 +1,11 @@
+import { useSelector } from 'react-redux'
+import { RootState } from 'src/store'
 import { ContactType } from 'src/types'
-import { getUseSelectorData } from 'src/utils'
 
 const useInfoBlock = () => {
-  const contacts = getUseSelectorData('contacts') as ContactType[]
+  const contacts = useSelector(
+    (state: RootState) => state.contacts,
+  ) as ContactType[]
 
   return { contacts }
 }

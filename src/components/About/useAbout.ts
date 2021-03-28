@@ -1,10 +1,14 @@
-import { getUseSelectorData } from 'src/utils'
+import { useSelector } from 'react-redux'
+import { RootState } from 'src/store'
 
 export const useAbout = () => {
-  const name = getUseSelectorData('name')
-  const position = getUseSelectorData('position')
-  const bio = getUseSelectorData('bio')
-  const avatar = getUseSelectorData('avatar')
+  const { name, position, bio, avatar } = useSelector((store: RootState) => ({
+    name: store.name,
+    email: store.email,
+    bio: store.bio,
+    avatar: store.avatar,
+    position: store.position,
+  }))
 
   return {
     name,
