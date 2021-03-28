@@ -28,6 +28,8 @@ export const reducer = (state = initialState, action: CvData) => {
         position: exp.position,
         period: exp.period,
         location: exp.location,
+        description: exp.description || null,
+        contact: exp.contact || null,
         achievementsTasks: exp.achievementsTasks.map(task => ({
           task: task.task,
         })),

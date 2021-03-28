@@ -24,6 +24,8 @@ const initialState: CvDataType = {
       position: 'position',
       period: 'period',
       location: 'location',
+      contact: null,
+      description: null,
       achievementsTasks: [
         {
           task: 'task',

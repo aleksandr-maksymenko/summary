@@ -29,8 +29,8 @@ export type ExperienceType = {
   period: string
   location: string
   achievementsTasks: AchievementsTasks[]
-  contact?: string
-  description?: string
+  contact?: string | null
+  description?: string | null
 }
 
 export type CvDataType = {
